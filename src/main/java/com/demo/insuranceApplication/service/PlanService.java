@@ -14,26 +14,31 @@ public class PlanService {
 	@Autowired
 	private PlanRepository repos;
 
+	
+//findall
 	public List<Plan> getPlan() {
-		// TODO Auto-generated method stub
 		return this.repos.findAll();
 	}
 
+//add
 	public Plan add(Plan plan) {
 		// TODO Auto-generated method stub
 		return this.repos.save(plan);
 	}
 
+//findbyid
 	public Plan findByPid(int id) {
 		// TODO Auto-generated method stub
 		return this.repos.findById(id).get();
 	}
-
+	
+//update
 	public Plan getDetails(int id) {
 		// TODO Auto-generated method stub
 		return this.repos.findById(id).get();
 	}
-
+	
+//delete
 	public void deletedetails(Plan policyDetails) {
 		// TODO Auto-generated method stub
 		this.repos.delete(policyDetails);
